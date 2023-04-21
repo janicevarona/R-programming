@@ -1,0 +1,22 @@
+# Show the name of flights in descending format based on each Taxi-in time.
+
+hflights %>% 
+  arrange(desc(TaxiIn)) %>% 
+  View()
+
+
+
+# Create a new variable containing the length of taxi time among the flights and arrange it in descending order to show which flight has the highest taxi time.
+
+hflights %>% 
+  mutate(highest = TaxiIn-TaxiOut) %>% 
+  arrange (desc(highest)) %>% 
+  View()
+
+
+
+# Filter and show the number of flights covering more than 3000 miles distances.
+
+hflights %>% 
+  filter(Distance >= 3000) %>% 
+  count(Distance)
