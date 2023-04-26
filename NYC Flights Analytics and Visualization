@@ -1,0 +1,22 @@
+# R visualization
+
+
+
+# Create a scatterplot using the variables in the portland_flights data frame.
+
+ggplot (data = portland_flights, mapping = aes(x = arr_time, y = arr_delay)) +
++ geom_point ()
+
+
+
+# Plot a time series of dewpoint for Newark Airport in the first 15 days of January 2013.
+
+View (weather)
+ggplot (early_january_weather, mapping = aes (x = time_hour, y = dewp)) +
++ geom_line()
+
+
+
+# Calculate and show how many American Airlines flights left New York City in 2013.
+
+Flights %>% count (carrier == “AA”)
